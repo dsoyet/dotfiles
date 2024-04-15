@@ -1,0 +1,45 @@
+Host storage
+  HostName 192.168.235.53
+  User vagrant
+Host g634j
+  HostName 192.168.64.25
+  Port 64
+Host rar8x
+  HostName 192.168.64.31
+  Port 64
+Host aliyun
+  HostName {{ keepassxcAttribute "aliyun" "ip" }}
+  User root
+  Port 2222
+Host suse
+  HostName 192.168.122.172
+Host gitlab
+  HostName 10.16.129.17
+  User admin
+Host deploy
+  HostName 10.16.129.139
+  User root
+Host bridge
+  HostName {{ keepassxcAttribute "Job" "jump" }}
+  User shenyang
+  Port 2222
+  PubkeyAcceptedAlgorithms +ssh-rsa
+  HostkeyAlgorithms +ssh-rsa
+Host g634s
+  HostName 192.168.64.25
+  User vagrant
+Host rar8s
+  HostName 192.168.64.31
+  User vagrant
+Host outlook
+  HostName 192.168.64.24
+  User admin
+Host offline
+  HostName 192.168.235.64
+  User vagrant
+
+Host *
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null

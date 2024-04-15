@@ -1,0 +1,20 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh net-edit example
+or other application using the libvirt API.
+-->
+
+<network ipv6='yes'>
+  <name>example</name>
+  <uuid>c77ae589-0bbe-4dc6-b15d-94e5c11a83c2</uuid>
+  <forward mode='nat'/>
+  <bridge name='virbr2' stp='on' delay='0'/>
+  <mac address='52:54:00:86:bb:6f'/>
+  <domain name='example.fake' localOnly='yes'/>
+  <ip address='192.168.235.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='192.168.235.1' end='192.168.235.254'/>
+    </dhcp>
+  </ip>
+</network>

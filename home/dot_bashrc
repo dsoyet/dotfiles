@@ -1,0 +1,46 @@
+#
+# ~/.bashrc
+#
+
+# If not bash or running interactively, don't do anything
+[[ -n "${BASH_VERSION:-}" ]] || return                                                              
+[[ $- != *i* ]] && return
+
+if [[ "${UID}" == 0 ]]; then                                                                        
+    PS1='[\[\033[01;31m\]\h\[\033[00m\] \W]\$ '                       
+else                                                                                                
+    PS1='[\[\033[01;34m\]\h\[\033[00m\] \W]\$ '                       
+fi
+
+# share
+export VAGRANT_HOME=/usb/vagrant
+export GROFF_NO_SGR=1
+export EDITOR=/usr/bin/nvim
+
+if test "$HOME" != "/" ; then
+    for dir in $HOME/bin $HOME/.local/bin ; do
+        test -d $dir && PATH=$dir:$PATH
+    done
+fi
+
+HISTCONTROL="erasedups:ignorespace"
+
+# if installed set neovim as default editor
+if command -v nvim >/dev/null; then
+    alias vi='nvim'
+    alias vim='nvim'
+    alias edit='nvim'
+fi
+
+test -s ~/.alias && . ~/.alias || true
+alias grep='grep --color=auto'
+alias cz='chezmoi'
+alias ls='ls --color=auto'
+alias ip='ip --color=auto'
+alias cp='cp -a'
+alias vimdiff='nvim -d'
+alias telnet='nc -vz'
+alias tcp='lsof -nP -iTCP -sTCP:LISTEN'
+alias udp='lsof -nP -iUDP'
+alias lsblk='su -c "fdisk -l"'
+alias vcs='vcsi -w 1920 -g 2x8 --metadata-position hidden '

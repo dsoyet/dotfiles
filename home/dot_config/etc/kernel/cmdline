@@ -1,0 +1,1 @@
+root=/dev/mapper/root rootfstype=btrfs rw rootflags=rw,noatime,compress=zstd:3,ssd,space_cache=v2,subvolid=256,subvol=/root cryptdevice=/dev/nvme1n1p2:root pcie_acs_override=downstream,multifunction

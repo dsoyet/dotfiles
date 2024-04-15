@@ -1,0 +1,15 @@
+{
+	"auths": {
+		"https://index.docker.io/v1/": {
+			"auth": {{ keepassxcAttribute "Job" "dockerhub" }}
+		},
+		"registry.cds.rcrai.com": {
+			"auth": {{ keepassxcAttribute "Job" "cdscr" }}
+		},
+		"rcrai.tencentcloudcr.com": {
+			"auth": {{ keepassxcAttribute "Job" "jobcr" }}
+		}
+	},
+	"psFormat": "{{ `table {{.Label \"devcontainer.local_folder\"}}\\t{{.Status}}\\t{{.Names}}` }}",
+	"imagesFormat": "{{ `table {{.Repository}}:{{.Tag}}\t{{.Size}}` }}"
+}

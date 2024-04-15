@@ -1,0 +1,9 @@
+#{{ $packerVersion := "1.10.2" -}}
+#[".local/bin/git-credential-keepassxc"]
+#    type = "archive-file"
+#    url = "https://github.com/Frederick888/git-credential-keepassxc/releases/download/v0.14.0/ubuntu-latest-full.zip"
+#    path = "git-credential-keepassxc"
+#[".local/bin/packer"]
+#    type = "archive-file"
+#    url = "https://releases.hashicorp.com/packer/{{ $packerVersion }}/packer_{{ $packerVersion }}_{{ .chezmoi.os }}_{{ .chezmoi.arch }}.zip"
+#    path = "packer"

@@ -1,0 +1,12 @@
+{{- $email := promptStringOnce . "email" "Email address" -}}
+
+[data]
+    email = {{ $email | quote }}
+[git]
+    autoCommit = true
+    autoPush = true
+encryption = "gpg"
+[gpg]
+    recipient = "dsoyet@foxmail.com"
+[keepassxc]
+    database = "/home/share/Sync/Passwords.kdbx"
