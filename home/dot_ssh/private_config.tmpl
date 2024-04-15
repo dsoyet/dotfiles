@@ -3,10 +3,8 @@ Host storage
   User vagrant
 Host g634j
   HostName 192.168.64.25
-  Port 64
 Host rar8x
   HostName 192.168.64.31
-  Port 64
 Host aliyun
   HostName {{ keepassxcAttribute "aliyun" "ip" }}
   User root
@@ -27,9 +25,11 @@ Host bridge
   HostkeyAlgorithms +ssh-rsa
 Host g634s
   HostName 192.168.64.25
+  Port 64
   User vagrant
 Host rar8s
   HostName 192.168.64.31
+  Port 64
   User vagrant
 Host outlook
   HostName 192.168.64.24
