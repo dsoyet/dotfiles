@@ -7,14 +7,15 @@
         <device id="OFQ7ESR-E4LPBFP-BXVV4JI-QLHTCIB-IIQWWZP-ARHY5ZI-WVEKR4G-LX64PAT" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id={{ keepassxcAttribute .chezmoi.hostname "device-id" }} introducedBy="">
+        <device id="SKSTER5-CA6GJ4I-FJZBYK3-WYPERXG-3JIZWGT-Y3H5DJ5-BTUVFYV-GBXTSA2" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <device id="UIEC55F-XAICWSX-ISTVYUD-JFL7ZMG-5U3LI27-44NAJLB-W2INOZG-TRNMEAG" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <minDiskFree unit="%">1</minDiskFree>
-        <versioning>
+        <versioning type="trashcan">
+            <param key="cleanoutDays" val="30"></param>
             <cleanupIntervalS>3600</cleanupIntervalS>
             <fsPath></fsPath>
             <fsType>basic</fsType>
@@ -62,7 +63,7 @@
     </device>
     <device id="OFQ7ESR-E4LPBFP-BXVV4JI-QLHTCIB-IIQWWZP-ARHY5ZI-WVEKR4G-LX64PAT" name="tbs8x" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
-        <paused>false</paused>
+        <paused>true</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
         <maxSendKbps>0</maxSendKbps>
         <maxRecvKbps>0</maxRecvKbps>
@@ -71,7 +72,7 @@
         <remoteGUIPort>0</remoteGUIPort>
         <numConnections>0</numConnections>
     </device>
-    <device id={{ keepassxcAttribute .chezmoi.hostname "device-id" }} name="rar8x" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id="SKSTER5-CA6GJ4I-FJZBYK3-WYPERXG-3JIZWGT-Y3H5DJ5-BTUVFYV-GBXTSA2" name="rar8x" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
@@ -95,7 +96,7 @@
     </device>
     <gui enabled="true" tls="false" debugging="false" sendBasicAuthPrompt="false">
         <address>127.0.0.1:8384</address>
-        <apikey>{{ keepassxcAttribute .chezmoi.hostname "apikey" }}</apikey>
+        <apikey>EFCRvyFtmN7cQ2tGnwXwpg9aFDfxVVLW</apikey>
         <theme>default</theme>
     </gui>
     <ldap></ldap>
@@ -158,7 +159,7 @@
     <defaults>
         <folder id="" label="" path="~" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
             <filesystemType>basic</filesystemType>
-            <device id={{ keepassxcAttribute .chezmoi.hostname "device-id" }} introducedBy="">
+            <device id="SKSTER5-CA6GJ4I-FJZBYK3-WYPERXG-3JIZWGT-Y3H5DJ5-BTUVFYV-GBXTSA2" introducedBy="">
                 <encryptionPassword></encryptionPassword>
             </device>
             <minDiskFree unit="%">1</minDiskFree>
