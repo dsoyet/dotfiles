@@ -1,16 +1,16 @@
 <configuration version="37">
     <folder id="default" label="Default Folder" path="/home/share/Sync" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="KYIGKGQ-W362BHD-PHH4LBQ-M7UCODF-HNDI5XO-VMBJQ5S-DEAPUBN-VR4DHAO" introducedBy="">
+        <device id={{ keepassxcAttribute "r1218" "device-id" }} introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="OFQ7ESR-E4LPBFP-BXVV4JI-QLHTCIB-IIQWWZP-ARHY5ZI-WVEKR4G-LX64PAT" introducedBy="">
+        <device id={{ keepassxcAttribute "tbs8x" "device-id" }} introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="SKSTER5-CA6GJ4I-FJZBYK3-WYPERXG-3JIZWGT-Y3H5DJ5-BTUVFYV-GBXTSA2" introducedBy="">
+        <device id={{ keepassxcAttribute .chezmoi.hostname "device-id" }} introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="UIEC55F-XAICWSX-ISTVYUD-JFL7ZMG-5U3LI27-44NAJLB-W2INOZG-TRNMEAG" introducedBy="">
+        <device id={{ keepassxcAttribute "r1216" "device-id" }} introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <minDiskFree unit="%">1</minDiskFree>
@@ -50,7 +50,18 @@
             <maxTotalSize>4096</maxTotalSize>
         </xattrFilter>
     </folder>
-    <device id="KYIGKGQ-W362BHD-PHH4LBQ-M7UCODF-HNDI5XO-VMBJQ5S-DEAPUBN-VR4DHAO" name="r1218" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id={{ keepassxcAttribute "aliyun" "device-id" }} name="aliyun" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>    
+        <paused>false</paused>    
+        <autoAcceptFolders>false</autoAcceptFolders>    
+        <maxSendKbps>0</maxSendKbps>    
+        <maxRecvKbps>0</maxRecvKbps>    
+        <maxRequestKiB>0</maxRequestKiB>    
+        <untrusted>false</untrusted>    
+        <remoteGUIPort>0</remoteGUIPort>    
+        <numConnections>0</numConnections>    
+    </device>
+    <device id={{ keepassxcAttribute "r1218" "device-id" }} name="r1218" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
@@ -61,7 +72,7 @@
         <remoteGUIPort>0</remoteGUIPort>
         <numConnections>0</numConnections>
     </device>
-    <device id="OFQ7ESR-E4LPBFP-BXVV4JI-QLHTCIB-IIQWWZP-ARHY5ZI-WVEKR4G-LX64PAT" name="tbs8x" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id={{ keepassxcAttribute "tbs8x" "device-id" }} name="tbs8x" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>true</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
@@ -72,7 +83,7 @@
         <remoteGUIPort>0</remoteGUIPort>
         <numConnections>0</numConnections>
     </device>
-    <device id="SKSTER5-CA6GJ4I-FJZBYK3-WYPERXG-3JIZWGT-Y3H5DJ5-BTUVFYV-GBXTSA2" name="rar8x" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id={{ keepassxcAttribute "rar8x" "device-id" }} name="rar8x" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
@@ -83,7 +94,7 @@
         <remoteGUIPort>0</remoteGUIPort>
         <numConnections>0</numConnections>
     </device>
-    <device id="UIEC55F-XAICWSX-ISTVYUD-JFL7ZMG-5U3LI27-44NAJLB-W2INOZG-TRNMEAG" name="r1216" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id={{ keepassxcAttribute "r1216" "device-id" }} name="r1216" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
@@ -96,7 +107,7 @@
     </device>
     <gui enabled="true" tls="false" debugging="false" sendBasicAuthPrompt="false">
         <address>127.0.0.1:8384</address>
-        <apikey>EFCRvyFtmN7cQ2tGnwXwpg9aFDfxVVLW</apikey>
+        <apikey>{{ keepassxcAttribute "rar8x" "apikey" }}</apikey>
         <theme>default</theme>
     </gui>
     <ldap></ldap>
@@ -159,7 +170,7 @@
     <defaults>
         <folder id="" label="" path="~" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
             <filesystemType>basic</filesystemType>
-            <device id="SKSTER5-CA6GJ4I-FJZBYK3-WYPERXG-3JIZWGT-Y3H5DJ5-BTUVFYV-GBXTSA2" introducedBy="">
+            <device id={{ keepassxcAttribute "rar8x" "device-id" }} introducedBy="">
                 <encryptionPassword></encryptionPassword>
             </device>
             <minDiskFree unit="%">1</minDiskFree>
