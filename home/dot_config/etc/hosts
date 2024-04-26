@@ -1,0 +1,6 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+
+
+# cloud
+47.116.79.40 aliyun dsoleaf.icu
