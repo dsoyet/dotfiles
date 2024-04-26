@@ -33,6 +33,7 @@ openssh
 openvpn
 pavucontrol
 pipewire-pulse
+pix
 pkgfile
 python-pynacl
 qemu-full
@@ -65,3 +66,4 @@ xfdesktop
 xfwm4
 xfwm4-themes
 xorg-server
+xreader
