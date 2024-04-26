@@ -151,7 +151,7 @@
     </device>
     <gui enabled="true" tls="false" debugging="false" sendBasicAuthPrompt="false">
         <address>127.0.0.1:8384</address>
-        <apikey>{{ keepassxcAttribute "rar8x" "apikey" }}</apikey>
+        <apikey>{{ keepassxcAttribute .chezmoi.hostname "apikey" }}</apikey>
         <theme>default</theme>
     </gui>
     <ldap></ldap>
