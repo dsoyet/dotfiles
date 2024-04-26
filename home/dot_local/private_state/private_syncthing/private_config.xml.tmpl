@@ -214,7 +214,7 @@
     <defaults>
         <folder id="" label="" path="~" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
             <filesystemType>basic</filesystemType>
-            <device id={{ keepassxcAttribute "rar8x" "device-id" }} introducedBy="">
+            <device id={{ keepassxcAttribute .chezmoi.hostname "device-id" }} introducedBy="">
                 <encryptionPassword></encryptionPassword>
             </device>
             <minDiskFree unit="%">1</minDiskFree>
