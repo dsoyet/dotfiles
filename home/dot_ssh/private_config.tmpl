@@ -10,8 +10,8 @@ Host rar8x
   HostName 192.168.64.31
 Host aliyun
   HostName {{ keepassxcAttribute "aliyun" "ip" }}
-  User root
   Port 2222
+  LocalForward 38384 localhost:8384
 Host suse
   HostName 192.168.122.172
 Host gitlab
