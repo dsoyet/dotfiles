@@ -3,14 +3,14 @@
 		"https://index.docker.io/v1/": {
 			"auth": {{ keepassxcAttribute "Job" "dockerhub" }}
 		},
-		"registry.cds.rcrai.com": {
-			"auth": {{ keepassxcAttribute "Job" "cdscr" }}
-		},
 		"proxy.cds.rcrai.com:35000": {
 			"auth": {{ keepassxcAttribute "Job" "proxycr" }}
 		},
 		"rcrai.tencentcloudcr.com": {
 			"auth": {{ keepassxcAttribute "Job" "jobcr" }}
+		},
+		"registry.cds.rcrai.com": {
+			"auth": {{ keepassxcAttribute "Job" "cdscr" }}
 		}
 	},
 	"psFormat": "{{ `table {{.Label \"devcontainer.local_folder\"}}\\t{{.Status}}\\t{{.Names}}` }}",
