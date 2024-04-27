@@ -7,3 +7,7 @@
 #    type = "archive-file"
 #    url = "https://releases.hashicorp.com/packer/{{ $packerVersion }}/packer_{{ $packerVersion }}_{{ .chezmoi.os }}_{{ .chezmoi.arch }}.zip"
 #    path = "packer"
+[".local/bin/aliyun"]
+    type = "archive-file"
+    url = "https://aliyuncli.alicdn.com/aliyun-cli-{{ .chezmoi.os }}-latest-{{ .chezmoi.arch }}.tgz"
+    path = "aliyun"
