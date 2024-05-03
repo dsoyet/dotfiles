@@ -44,4 +44,4 @@ alias tcp='lsof -nP -iTCP -sTCP:LISTEN'
 alias udp='lsof -nP -iUDP'
 alias lsblk='su -c "fdisk -l"'
 alias vcs='vcsi -w 1920 -g 2x8 --metadata-position hidden '
-
+alias diffpkg='diff <(pacman -Qeq|sort) <(cat ~/code/base ~/code/pkg|sort)'

@@ -1,9 +1,9 @@
+aria2
 base
 bash-completion
 blueberry
 btrfs-progs
 calibre
-chromium
 cryptsetup
 dnsmasq
 dosfstools
@@ -14,7 +14,7 @@ exo
 ffmpegthumbnailer
 freerdp
 garcon
-git
+gvfs-mtp
 iptables-nft
 iwd
 keepassxc
@@ -46,6 +46,7 @@ telegram-desktop
 terminus-font
 thunar
 thunar-archive-plugin
+thunar-volman
 tmux
 tumbler
 vagrant
@@ -67,3 +68,4 @@ xfwm4
 xfwm4-themes
 xorg-server
 xreader
+yt-dlp
