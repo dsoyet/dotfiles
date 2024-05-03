@@ -1,0 +1,26 @@
+[google]
+type = drive
+client_id = {{ keepassxcAttribute "Google" "client_id" }}
+client_secret = {{ keepassxcAttribute "Google" "client_secret" }}
+scope = drive
+token = {{ keepassxcAttribute "Google" "token" }}
+team_drive = 
+
+[onedrive]
+type = onedrive
+token = {{ keepassxcAttribute "Microsoft" "token" }}
+drive_id = 2505b0eb7e7a011e
+drive_type = personal
+
+[cos]
+type = s3
+provider = TencentCOS
+access_key_id = {{ keepassxcAttribute "Job" "cos_access_key_id" }}
+secret_access_key = {{ keepassxcAttribute "Job" "cos_secret_access_key" }}
+endpoint = cos.ap-beijing.myqcloud.com
+acl = default
+
+[bootstrap]
+type = alias
+remote = cos:bj-efficient-1301935175
+
