@@ -3,12 +3,12 @@ type = drive
 client_id = {{ keepassxcAttribute "Google" "client_id" }}
 client_secret = {{ keepassxcAttribute "Google" "client_secret" }}
 scope = drive
-token = {{ keepassxcAttribute "Google" "token" }}
+token = {"access_token":{{ keepassxcAttribute "Google" "access_token" }},"token_type":"Bearer","refresh_token":{{ keepassxcAttribute "Google" "refresh_token" }},"expiry":"2024-05-03T02:18:05.057732058+08:00"}
 team_drive = 
 
 [onedrive]
 type = onedrive
-token = {{ keepassxcAttribute "Microsoft" "token" }}
+token = {"access_token":{{ keepassxcAttribute "Microsoft" "access_token" }},"token_type":"Bearer","refresh_token":{{ keepassxcAttribute "Microsoft" "refresh_token" }},"expiry":"2024-05-03T03:22:23.777854532+08:00"}
 drive_id = 2505b0eb7e7a011e
 drive_type = personal
 
