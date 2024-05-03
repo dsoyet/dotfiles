@@ -10,4 +10,9 @@
   <property name="last-show-hidden" type="bool" value="false"/>
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="misc-volume-management" type="bool" value="false"/>
+  <property name="last-window-width" type="int" value="571"/>
+  <property name="last-window-height" type="int" value="430"/>
+  <property name="last-window-maximized" type="bool" value="false"/>
+  <property name="last-sort-column" type="string" value="THUNAR_COLUMN_DATE_MODIFIED"/>
+  <property name="last-sort-order" type="string" value="GTK_SORT_DESCENDING"/>
 </channel>

@@ -22,6 +22,7 @@
         <value type="int" value="9"/>
         <value type="int" value="11"/>
         <value type="int" value="12"/>
+        <value type="int" value="7"/>
       </property>
     </property>
   </property>
@@ -56,5 +57,6 @@
     </property>
     <property name="plugin-6" type="string" value="netload"/>
     <property name="plugin-1" type="string" value="applicationsmenu"/>
+    <property name="plugin-7" type="string" value="thunar-tpa"/>
   </property>
 </channel>
