@@ -23,10 +23,13 @@ Host gitlab
 Host deploy
   HostName 10.16.129.139
   User root
-Host bridge
+Host rc
   HostName {{ keepassxcAttribute "Job" "jump" }}
   User shenyang
   Port 2222
+  ControlPath ~/.local/state/openssh/%r@%h:%p
+  ControlMaster auto
+  ControlPersist 2h
   PubkeyAcceptedAlgorithms +ssh-rsa
   HostkeyAlgorithms +ssh-rsa
 Host g634s
