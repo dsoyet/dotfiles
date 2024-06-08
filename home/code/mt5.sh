@@ -5,7 +5,8 @@
 # MetaTrader download url
 URL="https://download.mql5.com/cdn/web/metaquotes.software.corp/mt5/mt5setup.exe"
 
-pacman -Sy wine wine-mono wine-gecko
+#mono for .net, geoko for IE
+pacman -Sy wine-mono wine-gecko wine-wow64
 
 # Download MetaTrader
 wget $URL
@@ -14,3 +15,5 @@ wget $URL
 WINEPREFIX=~/.mt5 winecfg -v=win10
 # Start MetaTrader installer
 WINEPREFIX=~/.mt5 wine mt5setup.exe
+
+#winecfg set dpi 192
