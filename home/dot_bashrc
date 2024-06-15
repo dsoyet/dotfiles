@@ -17,6 +17,10 @@ export VAGRANT_HOME=/usb/vagrant
 export GROFF_NO_SGR=1
 export EDITOR=/usr/bin/nvim
 
+# wine
+export WINEPREFIX=$HOME/.local/share/wine
+export WINEDLLOVERRIDES="mscoree,mshtml=,winebrowser.exe="
+
 if test "$HOME" != "/" ; then
     for dir in $HOME/bin $HOME/.local/bin ; do
         test -d $dir && PATH=$dir:$PATH
