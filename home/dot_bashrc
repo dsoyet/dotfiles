@@ -18,6 +18,7 @@ export GROFF_NO_SGR=1
 export EDITOR=/usr/bin/nvim
 
 # wine
+export MT5="$HOME/.local/share/wine/drive_c/Program Files/MetaTrader 5"
 export WINEPREFIX=$HOME/.local/share/wine
 export WINEDLLOVERRIDES="mscoree,mshtml=,winebrowser.exe="
 
