@@ -4,6 +4,9 @@ Host storage
 Host debian
   HostName 192.168.235.54
   User vagrant
+Host sg
+  HostName {{ keepassxcAttribute "sg" "hostname" }}
+  User debian
 Host uk
   HostName {{ keepassxcAttribute "uk" "hostname" }}
   User debian
