@@ -1,0 +1,4 @@
+#s_sh000905
+#sh510500
+#s_sh510500
+curl -s --referer http://finance.sina.com.cn http://hq.sinajs.cn/list=$1|cut -d',' -f4
