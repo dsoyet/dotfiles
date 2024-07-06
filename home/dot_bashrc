@@ -22,6 +22,10 @@ export MT5="$HOME/.local/share/wine/drive_c/Program Files/MetaTrader 5"
 export WINEPREFIX=$HOME/.local/share/wine
 export WINEDLLOVERRIDES="mscoree,mshtml=,winebrowser.exe="
 
+# apptainer
+export APPTAINER_CONFIGDIR="$HOME/.config/apptainer"
+export APPTAINER_CACHEDIR="$HOME/.cache/apptainer"
+
 if test "$HOME" != "/" ; then
     for dir in $HOME/bin $HOME/.local/bin ; do
         test -d $dir && PATH=$dir:$PATH
