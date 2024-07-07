@@ -22,6 +22,21 @@ export MT5="$HOME/.local/share/wine/drive_c/Program Files/MetaTrader 5"
 export WINEPREFIX=$HOME/.local/share/wine
 export WINEDLLOVERRIDES="mscoree,mshtml=,winebrowser.exe="
 
+# xorg
+export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
+export XINITRC=$XDG_CONFIG_HOME/X11/xinitrc
+export ICEAUTHORITY=$XDG_CACHE_HOME/ICEauthority
+
+# misc
+export GNUPGHOME=$XDG_DATA_HOME/gnupg
+export GOPATH=$XDG_DATA_HOME/go
+export HISTFILE=$XDG_STATE_HOME/bash/history
+
+# sci
+export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
+export DOT_SAGE=$XDG_CONFIG_HOME/sage
+export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
+
 # apptainer
 export APPTAINER_CONFIGDIR="$HOME/.config/apptainer"
 export APPTAINER_CACHEDIR="$HOME/.cache/apptainer"
