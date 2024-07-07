@@ -1,35 +1,77 @@
 Host storage
   HostName 192.168.235.53
   User vagrant
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host debian
   HostName 192.168.235.54
   User vagrant
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host sg
   HostName {{ keepassxcAttribute "sg" "hostname" }}
   User debian
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host uk
   HostName {{ keepassxcAttribute "uk" "hostname" }}
   User debian
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host g634j
   HostName 192.168.64.25
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host rar8x
   HostName 192.168.64.31
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host aliyun
   HostName {{ keepassxcAttribute "aliyun" "ip" }}
   Port 2222
   LocalForward 38384 localhost:8384
+  StrictHostKeyChecking no
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host suse
   HostName 192.168.122.172
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host gitlab
   HostName 10.16.129.17
   User admin
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host deploy
   HostName 10.16.129.139
   User root
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host rc
   HostName {{ keepassxcAttribute "Job" "jump" }}
   User shenyang
   Port 2222
+  StrictHostKeyChecking no
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
   ControlPath ~/.local/state/openssh/%r@%h:%p
   ControlMaster auto
   ControlPersist 2h
@@ -39,19 +81,28 @@ Host g634s
   HostName 192.168.64.25
   Port 64
   User vagrant
+  StrictHostKeyChecking no
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host rar8s
   HostName 192.168.64.31
   Port 64
   User vagrant
+  StrictHostKeyChecking no
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
 Host outlook
   HostName 192.168.64.24
   User admin
-Host offline
-  HostName 192.168.235.64
-  User vagrant
-
-Host *
   StrictHostKeyChecking no
   Port 22
   LogLevel FATAL
   UserKnownHostsFile=/dev/null
+Host offline
+  HostName 192.168.235.64
+  User vagrant
+  StrictHostKeyChecking no
+  Port 22
+  LogLevel FATAL
+  UserKnownHostsFile=/dev/null
+
