@@ -1,4 +1,4 @@
-{{ $packerVersion := "1.10.3" -}}
+{{ $packerVersion := "1.11.1" -}}
 #[".local/bin/git-credential-keepassxc"]
 #    type = "archive-file"
 #    url = "https://github.com/Frederick888/git-credential-keepassxc/releases/download/v0.14.0/ubuntu-latest-full.zip"
