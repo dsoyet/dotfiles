@@ -28,8 +28,8 @@ pre_start()
   if [ -r /etc/profile ]; then
     . /etc/profile
   fi
-  if [ -r ~/.bashrc ]; then
-    . ~/.bashrc
+  if [ -r ~/.bashrc_profile ]; then
+    . ~/.bashrc_profile
   else
     if [ -r ~/.bash_login ]; then
       . ~/.bash_login
