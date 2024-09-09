@@ -40,7 +40,7 @@
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="known-players" type="string" value="Chrome;mpv"/>
+      <property name="known-players" type="string" value="Chrome;mpv;Vivaldi"/>
     </property>
     <property name="plugin-6" type="string" value="netload"/>
     <property name="plugin-1" type="string" value="applicationsmenu"/>
