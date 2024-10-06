@@ -8,6 +8,11 @@
   <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
   <property name="misc-default-geometry" type="string" value="100x24"/>
   <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_TRANSPARENT"/>
-  <property name="background-darkness" type="double" value="0.80000000000000004"/>
+  <property name="background-darkness" type="double" value="1"/>
   <property name="scrolling-unlimited" type="bool" value="true"/>
+  <property name="misc-slim-tabs" type="bool" value="true"/>
+  <property name="color-use-theme" type="bool" value="true"/>
+  <property name="color-background-vary" type="bool" value="false"/>
+  <property name="misc-borders-default" type="bool" value="false"/>
+  <property name="color-bold-is-bright" type="bool" value="false"/>
 </channel>
