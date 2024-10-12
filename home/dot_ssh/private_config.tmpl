@@ -37,6 +37,15 @@ Host rc
   ControlPersist 2h
   PubkeyAcceptedAlgorithms +ssh-rsa
   HostkeyAlgorithms +ssh-rsa
+Host hw
+  HostName {{ keepassxcAttribute "Job" "huawei" }}
+  User root
+  Port 2234
+  ControlPath ~/.local/state/openssh/%r@%h:%p
+  ControlMaster auto
+  ControlPersist 2h
+  PubkeyAcceptedAlgorithms +ssh-rsa
+  HostkeyAlgorithms +ssh-rsa
 Host g634s
   HostName 192.168.64.25
   Port 2103
