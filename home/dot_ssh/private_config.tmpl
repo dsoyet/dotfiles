@@ -39,7 +39,7 @@ Host rc
   HostkeyAlgorithms +ssh-rsa
 Host hw
   HostName {{ keepassxcAttribute "Job" "huawei" }}
-  User root
+  User share
   Port 2234
   ControlPath ~/.local/state/openssh/%r@%h:%p
   ControlMaster auto
