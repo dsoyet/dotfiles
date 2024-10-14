@@ -1,0 +1,2 @@
+ICEAUTHORITY=$HOME/.local/state/ICEauthority
+XAUTHORITY=$HOME/.local/state/Xauthority
