@@ -1,0 +1,16 @@
+{
+  "name": "xacklinux/xacklinux",
+  "description": "This box contains latest Linux",
+  "versions": [
+    {
+      "version": "20240901.259602",
+      "providers": [
+        {
+          "name": "libvirt",
+	  "architecture": "amd64",
+          "url": "file:///home/share/Downloads/archlinux_libvirt.box"
+        }
+      ]
+    }
+  ]
+}
