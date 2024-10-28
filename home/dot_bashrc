@@ -68,6 +68,7 @@ alias vimdiff='nvim -d'
 alias telnet='nc -vz'
 alias tcp='lsof -nP -iTCP -sTCP:LISTEN'
 alias udp='lsof -nP -iUDP'
+alias cm='cd $(chezmoi source-path)'
 #alias lsblk='su -c "fdisk -l"'
 #rclone mount bootstrap: /cos --daemon
 alias cki='vagrant box add outlook.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol xacklinux-VAGRANTSLASH-xacklinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f fake6; unset box; vagrant up fake6'

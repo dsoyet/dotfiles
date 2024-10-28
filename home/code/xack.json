@@ -8,7 +8,7 @@
         {
           "name": "libvirt",
 	  "architecture": "amd64",
-          "url": "file:///home/share/Phone/Outlook_ZH-CN.box"
+          "url": "file:///usb/phone/box/libvirt/2025_EN-US-windows-x86_64.libvirt.box"
         }
       ]
     }
