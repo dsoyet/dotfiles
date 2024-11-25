@@ -8,7 +8,7 @@
         {
           "name": "libvirt",
 	  "architecture": "amd64",
-          "url": "file:///home/share/Downloads/24_EN-US-nix-x86_64.libvirt.box"
+          "url": "file:///home/share/Downloads/2024_EN-US-gentoo-x86_64.libvirt.box"
         }
       ]
     }
