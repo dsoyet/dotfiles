@@ -34,7 +34,8 @@ export GOPATH=$XDG_DATA_HOME/go
 export HISTFILE=$XDG_STATE_HOME/bash/history
 export VAGRANT_DISABLE_STRICT_DEPENDENCY_ENFORCEMENT=1
 #Possibly missing firmware for module: 'xhci_pci_renesas'
-#sudo touch /usr/lib/firmware/renesas_usb_fw.mem
+#touch /usr/lib/firmware/renesas_usb_fw.mem
+#touch /usr/lib/firmware/qat_420xx.bin
 
 # sci
 export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
