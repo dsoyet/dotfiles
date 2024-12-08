@@ -36,6 +36,7 @@ export VAGRANT_DISABLE_STRICT_DEPENDENCY_ENFORCEMENT=1
 #Possibly missing firmware for module: 'xhci_pci_renesas'
 #touch /usr/lib/firmware/renesas_usb_fw.mem
 #touch /usr/lib/firmware/qat_420xx.bin
+#mpv av://v4l2:/dev/video0 --profile=low-latency --untimed
 
 # sci
 export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
