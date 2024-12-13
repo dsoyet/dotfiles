@@ -16,7 +16,7 @@ fi
 # pacman -Sy gcc make pkgconf for libvirt plugin
 export VAGRANT_HOME=/usb/vagrant
 export GROFF_NO_SGR=1
-export EDITOR=/usr/bin/nvim
+export EDITOR=/usr/bin/vim
 
 # wine
 export MT5="$HOME/.local/share/wine/drive_c/Program Files/MetaTrader 5"
@@ -55,20 +55,12 @@ fi
 
 HISTCONTROL="erasedups:ignorespace"
 
-# if installed set neovim as default editor
-if command -v nvim >/dev/null; then
-    alias vi='nvim'
-    alias vim='nvim'
-    alias edit='nvim'
-fi
-
 test -s ~/.alias && . ~/.alias || true
 alias grep='grep --color=auto'
 alias cz='chezmoi'
 alias ls='ls --color=auto'
 alias ip='ip --color=auto'
 alias cp='cp -a'
-alias vimdiff='nvim -d'
 alias telnet='nc -vz'
 alias tcp='lsof -nP -iTCP -sTCP:LISTEN'
 alias udp='lsof -nP -iUDP'
@@ -83,7 +75,7 @@ alias wh='vagrant box add xack.json --force; cd ~/code; su -c "virsh vol-delete 
 alias ach='vagrant box add arch.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol xacklinux-VAGRANTSLASH-xacklinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f devbox3; unset box; vagrant up devbox3'
 alias kal='vagrant box add kali.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol xacklinux-VAGRANTSLASH-xacklinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f fake1; unset box; vagrant up fake1'
 alias mint='vagrant box add mint.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol xacklinux-VAGRANTSLASH-xacklinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f fake1; unset box; vagrant up fake1'
-alias reload='vagrant box add arch.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol archlinux-VAGRANTSLASH-archlinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f devbox3; unset box; vagrant up devbox3'
+alias reload='vagrant box add arch.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol archlinux-VAGRANTSLASH-archlinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f devbox3; unset box; vagrant up devbox3; vagrant reload devbox3'
 alias df='df -x tmpfs -h'
 alias vcs='vcsi -w 1920 -g 2x8 --metadata-position hidden '
 alias diffpkg='diff <(pacman -Qeq|sort) <(cat ~/code/base ~/code/pkg|sort)'
