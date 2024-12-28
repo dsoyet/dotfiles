@@ -24,6 +24,7 @@ export WINEPREFIX=$HOME/.local/share/wine
 export WINEDLLOVERRIDES="mscoree,mshtml=,winebrowser.exe="
 
 # xorg
+export SSH_AUTH_SOCK=${XDG_RUNTIME_DIR}/ssh-agent.socket
 export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
 export XINITRC=$XDG_CONFIG_HOME/X11/xinitrc
 export ICEAUTHORITY=$XDG_CACHE_HOME/ICEauthority
