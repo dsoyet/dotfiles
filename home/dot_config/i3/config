@@ -2,13 +2,13 @@ bindsym $mod+b exec /opt/chromium/115Browser/115.sh --ozone-platform-hint=auto
 bindsym $mod+Shift+l exec i3lock
 bindsym $mod+Return exec alacritty
 exec_always libinput-gestures-setup start
-bar {
-    mode hide
-    hidden_state hide
-    position bottom
-    status_command i3status
-    modifier Mod2
-}
+# bar {
+#     mode hide
+#     hidden_state hide
+#     position bottom
+#     status_command i3status
+#     modifier Mod2
+# }
 default_floating_border none
 default_border none
 

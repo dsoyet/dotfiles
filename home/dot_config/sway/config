@@ -59,14 +59,14 @@ bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym Print exec slurp | grim -g - - | wl-copy
 
-bar {
-    #height 48
-    mode hide
-    hidden_state hide
-    position bottom
-    status_command i3status
-    modifier Mod2
-}
+# bar {
+#     #height 48
+#     mode hide
+#     hidden_state hide
+#     position bottom
+#     status_command i3status
+#     modifier Mod2
+# }
 default_border none
 default_floating_border none
 
