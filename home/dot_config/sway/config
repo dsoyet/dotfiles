@@ -3,7 +3,7 @@ for_window [app_id="virt-manager"] floating enable
 
 set $mod Mod4
 set $term alacritty
-set $menu wmenu-run
+set $menu "rofi -modi drun,run -show drun"
 #j4-dmenu-desktop
 for_window [app_id="Alacritty"] move scratchpad, resize set 1130 810
 for_window [app_id="Thunar"] move scratchpad, resize set 1462 914
