@@ -1,7 +1,7 @@
 # This file is parsed by pam_env module
 #
 # For lightdm
-# GDK_SCALE=2
+#GDK_SCALE=2
 # For DPI
 #GDK_DPI_SCALE=0.5
 #QT_FONT_DPI=192
@@ -13,9 +13,11 @@
 # For vmd 
 IMSM_NO_PLATFORM=1
 # For fcitx
+XMODIFIERS=@im=fcitx
 QT_IM_MODULE=fcitx
 GTK_IM_MODULE=fcitx
 # For wayland
-#GDK_BACKEND=wayland
-#QT_QPA_PLATFORM=wayland
-#QT_QPA_PLATFORMTHEME=qt5ct
+MOZ_ENABLE_WAYLAND=1
+GDK_BACKEND=wayland
+QT_QPA_PLATFORM=wayland
+QT_QPA_PLATFORMTHEME=qt5ct
