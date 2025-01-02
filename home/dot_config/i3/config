@@ -26,6 +26,7 @@ bindsym $mod+Shift+e exec i3-msg exit
 bindsym $mod+l exec i3lock --color 000000
 exec --no-startup-id libinput-gestures
 exec --no-startup-id fcitx5 -d
+exec --no-startup-id picom -b --backend glx
 font pango:monospace 14
 # bar {
 #     mode hide
