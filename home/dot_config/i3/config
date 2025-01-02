@@ -1,7 +1,22 @@
-bindsym $mod+b exec /opt/chromium/115Browser/115.sh --ozone-platform-hint=auto
-bindsym $mod+Shift+l exec i3lock
-bindsym $mod+Return exec alacritty
+#libinput debug-events --show-keycodes
+set $mod Mod4
+set $term alacritty
+set $menu "rofi -modi drun,run -show drun -x11 -dpi 192"
+
+bindsym $mod+Return exec $term
+bindsym $mod+b exec /opt/chromium/115Browser/115.sh --ozone-platform-hint=auto 
+bindsym $mod+g exec google-chrome-stable --ozone-platform-hint=auto
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec $menu
+bindsym $mod+e exec thunar
+bindsym $mod+c exec code --ozone-platform-hint=auto
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec i3-msg exit
+
+
+bindsym $mod+l exec i3lock
 exec_always libinput-gestures-setup start
+font pango:monospace 8
 # bar {
 #     mode hide
 #     hidden_state hide
@@ -12,17 +27,12 @@ exec_always libinput-gestures-setup start
 default_floating_border none
 default_border none
 
-set $mod Mod1
-
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym $mod+Shift+q kill
-
-bindsym $mod+d exec "rofi -modi drun,run -show drun"
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -49,6 +59,4 @@ bindsym $mod+Shift+4 move container to workspace number 4
 bindsym $mod+Shift+5 move container to workspace number 5
 bindsym $mod+Shift+6 move container to workspace number 6
 
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec i3-msg exit
+

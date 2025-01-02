@@ -5,7 +5,6 @@ for_window [app_id="virt-manager"] floating enable
 set $mod Mod4
 set $term alacritty
 set $menu "rofi -modi drun,run -show drun"
-#j4-dmenu-desktop
 for_window [app_id="Alacritty"] move scratchpad, resize set 1130 810
 for_window [app_id=".hunar"] move scratchpad, resize set 1462 914
 bindsym $mod+space exec swaymsg [app_id="Alacritty"] scratchpad show
@@ -18,10 +17,6 @@ input type:touchpad {
     natural_scroll enabled
     middle_emulation enabled
 }
-#input type:keyboard {
-#    repeat_delay 500
-#    repeat_rate 5
-#}
 
 bindsym $mod+Return exec $term
 bindsym $mod+b exec /opt/chromium/115Browser/115.sh --ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=3
