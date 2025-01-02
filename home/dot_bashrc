@@ -15,38 +15,32 @@ fi
 # share
 # pacman -Sy gcc make pkgconf for libvirt plugin
 export VAGRANT_HOME=/usb/vagrant
-export GROFF_NO_SGR=1
-export EDITOR=/usr/bin/vim
 
 # wine
-export MT5="$HOME/.local/share/wine/drive_c/Program Files/MetaTrader 5"
-export WINEPREFIX=$HOME/.local/share/wine
-export WINEDLLOVERRIDES="mscoree,mshtml=,winebrowser.exe="
+#export MT5="$HOME/.local/share/wine/drive_c/Program Files/MetaTrader 5"
+#export WINEPREFIX=$HOME/.local/share/wine
+#export WINEDLLOVERRIDES="mscoree,mshtml=,winebrowser.exe="
 
 # xorg
 export SSH_AUTH_SOCK=${XDG_RUNTIME_DIR}/ssh-agent.socket
 export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
 export XINITRC=$XDG_CONFIG_HOME/X11/xinitrc
-export ICEAUTHORITY=$XDG_CACHE_HOME/ICEauthority
+#export ICEAUTHORITY=$XDG_CACHE_HOME/ICEauthority
 
 # misc
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
 export GOPATH=$XDG_DATA_HOME/go
 export HISTFILE=$XDG_STATE_HOME/bash/history
-export VAGRANT_DISABLE_STRICT_DEPENDENCY_ENFORCEMENT=1
+#export VAGRANT_DISABLE_STRICT_DEPENDENCY_ENFORCEMENT=1
 #Possibly missing firmware for module: 'xhci_pci_renesas'
 #touch /usr/lib/firmware/renesas_usb_fw.mem
 #touch /usr/lib/firmware/qat_420xx.bin
 #mpv av://v4l2:/dev/video0 --profile=low-latency --untimed
 
 # sci
-export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
-export DOT_SAGE=$XDG_CONFIG_HOME/sage
-export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
-
-# apptainer
-export APPTAINER_CACHEDIR="$HOME/.cache/apptainer"
-export APPTAINER_CONFIGDIR="$HOME/.config/apptainer"
+#export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
+#export DOT_SAGE=$XDG_CONFIG_HOME/sage
+#export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
 
 if test "$HOME" != "/" ; then
     for dir in $HOME/bin $HOME/.local/bin ; do
@@ -56,7 +50,7 @@ fi
 
 HISTCONTROL="erasedups:ignorespace"
 
-test -s ~/.alias && . ~/.alias || true
+test -s ~/.config/bash/alias.sh && . ~/.config/bash/alias.sh || true
 alias grep='grep --color=auto'
 alias cz='chezmoi'
 alias vi='vim'
@@ -68,19 +62,4 @@ alias tcp='lsof -nP -iTCP -sTCP:LISTEN'
 alias udp='lsof -nP -iUDP'
 alias cm='cd $(chezmoi source-path)'
 #alias lsblk='su -c "fdisk -l"'
-alias bah='packer build --only=qemu.vm --var-file=os_pkrvars/bootstrap/archlinux.pkrvars.hcl packer_templates'
-alias bnx='packer build --only=qemu.vm --var-file=os_pkrvars/bootstrap/nix.pkrvars.hcl packer_templates'
-alias cos='rclone mount remote:/bootstrap /cos --daemon'
-alias wget='aria2c -x 16'
-alias cki='vagrant box add outlook.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol xacklinux-VAGRANTSLASH-xacklinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f fake6; unset box; vagrant up fake6'
-alias wh='vagrant box add xack.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol xacklinux-VAGRANTSLASH-xacklinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f fake6; unset box; vagrant up fake6'
-alias ach='vagrant box add arch.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol xacklinux-VAGRANTSLASH-xacklinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f devbox3; unset box; vagrant up devbox3'
-alias kal='vagrant box add kali.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol xacklinux-VAGRANTSLASH-xacklinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f fake1; unset box; vagrant up fake1'
-alias mint='vagrant box add mint.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol xacklinux-VAGRANTSLASH-xacklinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f fake1; unset box; vagrant up fake1'
-alias reload='vagrant box add arch.json --force; cd ~/code; su -c "virsh vol-delete --pool default --vol archlinux-VAGRANTSLASH-archlinux_vagrant_box_image_20240901.259602_box_0.img"; vagrant destroy -f devbox3; unset box; vagrant up devbox3; vagrant reload devbox3'
-alias df='df -x tmpfs -h'
-alias vcs='vcsi -w 1920 -g 2x8 --metadata-position hidden '
-alias diffpkg='diff <(pacman -Qeq|sort) <(cat ~/code/base ~/code/pkg|sort)'
-alias rdp='vagrant rdp fake6 -- /cert:ignore /smart-sizing:2400x1350 /scale:180 /f'
-alias redo='vagrant destroy -f /offline[1-4]/;vagrant up /offline[1-4]/'
-alias map='ssh -o User=Share -o Port=22 -o UserKnownHostsFile=/dev/null -o ExitOnForwardFailure=yes -o ControlMaster=no -o StrictHostKeyChecking=no -o PasswordAuthentication=yes -o ForwardX11=no -n -L 0.0.0.0:3289:192.168.122.54:3389 -N 192.168.122.54'
+test -s ~/.config/bash/function.sh && . ~/.config/bash/function.sh || true
