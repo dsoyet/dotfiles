@@ -1,10 +1,15 @@
-# set XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
-# set XINITRC=$XDG_CONFIG_DIR/X11/xinitrc
-# set $XDG_*
-# alacritty i3-wm rofi-wayland vim xorg-server xorg-xinit
+for_window [instance="Alacritty"] move scratchpad, resize set 2160 1480
+for_window [instance=".hunar"] move scratchpad, resize set 2160 1480
+bindsym $mod+s exec i3-msg [instance="Alacritty"] scratchpad show
+bindsym $mod+space exec i3-msg [instance=".hunar"] scratchpad show
+
+for_window [instance="keepassxc"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [instance="virt-manager"] floating enable
 #libinput debug-events --show-keycodes
 set $mod Mod4
-set $term alacritty
+set $term "alacritty"
 set $menu "rofi -modi drun,run -show drun -x11 -dpi 192"
 
 bindsym $mod+Return exec $term
@@ -18,9 +23,9 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec i3-msg exit
 
 
-bindsym $mod+l exec i3lock
+bindsym $mod+l exec i3lock --color 000000
 exec --no-startup-id libinput-gestures
-exec --no-startup-id fcitx5
+exec --no-startup-id fcitx5 -d
 font pango:monospace 14
 # bar {
 #     mode hide
@@ -64,4 +69,14 @@ bindsym $mod+Shift+4 move container to workspace number 4
 bindsym $mod+Shift+5 move container to workspace number 5
 bindsym $mod+Shift+6 move container to workspace number 6
 
+mode "resize" {
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
 
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
