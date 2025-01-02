@@ -1,11 +1,15 @@
+# set XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
+# set XINITRC=$XDG_CONFIG_DIR/X11/xinitrc
+# set $XDG_*
+# alacritty i3-wm rofi-wayland vim xorg-server xorg-xinit
 #libinput debug-events --show-keycodes
 set $mod Mod4
 set $term alacritty
 set $menu "rofi -modi drun,run -show drun -x11 -dpi 192"
 
 bindsym $mod+Return exec $term
-bindsym $mod+b exec /opt/chromium/115Browser/115.sh --ozone-platform-hint=auto 
-bindsym $mod+g exec google-chrome-stable --ozone-platform-hint=auto
+bindsym $mod+b exec /opt/chromium/115Browser/115.sh --ozone-platform-hint=auto --force-device-scale-factor=2
+bindsym $mod+g exec google-chrome-stable --ozone-platform-hint=auto --force-device-scale-factor=2
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+e exec thunar
@@ -15,8 +19,9 @@ bindsym $mod+Shift+e exec i3-msg exit
 
 
 bindsym $mod+l exec i3lock
-exec_always libinput-gestures-setup start
-font pango:monospace 8
+exec --no-startup-id libinput-gestures
+exec --no-startup-id fcitx5
+font pango:monospace 14
 # bar {
 #     mode hide
 #     hidden_state hide
