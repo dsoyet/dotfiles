@@ -59,6 +59,7 @@ HISTCONTROL="erasedups:ignorespace"
 test -s ~/.alias && . ~/.alias || true
 alias grep='grep --color=auto'
 alias cz='chezmoi'
+alias vi='vim'
 alias ls='ls --color=auto'
 alias ip='ip --color=auto'
 alias cp='cp -a'
