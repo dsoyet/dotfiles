@@ -5,13 +5,13 @@ bindsym $mod+space exec i3-msg [instance=".hunar"] scratchpad show
 
 for_window [instance="keepassxc"] floating enable
 for_window [window_type="dialog"] floating enable
-for_window [window_type="menu"] floating enable
 for_window [instance="virt-manager"] floating enable
 #libinput debug-events --show-keycodes
 set $mod Mod4
 set $term "alacritty"
 set $file "thunar"
 set $menu "rofi -modi drun,run -show drun -x11 -dpi 192"
+bindsym Print exec maim --select | xclip -selection clipboard -t image/png
 
 bindsym $mod+Return exec $term
 bindsym $mod+b exec /opt/chromium/115Browser/115.sh --ozone-platform-hint=auto --force-device-scale-factor=2
@@ -45,11 +45,15 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+bindsym $mod+Left move left 10px
+bindsym $mod+Right move right 10px
+bindsym $mod+Up move up 10px
+bindsym $mod+Down move down 10px
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+Shift+Left resize shrink width 10px
+bindsym $mod+Shift+Down resize grow height 10px
+bindsym $mod+Shift+Up resize shrink height 10px
+bindsym $mod+Shift+Right resize grow width 10px
 
 #bindsym $mod+h split h
 #bindsym $mod+v split v
@@ -70,15 +74,3 @@ bindsym $mod+Shift+3 move container to workspace number 3
 bindsym $mod+Shift+4 move container to workspace number 4
 bindsym $mod+Shift+5 move container to workspace number 5
 bindsym $mod+Shift+6 move container to workspace number 6
-
-mode "resize" {
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
-
-    # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
