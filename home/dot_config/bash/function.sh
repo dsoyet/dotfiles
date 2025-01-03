@@ -24,3 +24,36 @@ remove_string_from_filenames() {
 
     echo "操作完成！"
 }
+
+# 函数：获取网络吞吐量（MB/s）
+get_network_throughput() {
+    # 获取默认网络接口名称
+    INTERFACE=$(ip -o -4 route show to default | awk '{print $5}')
+    
+    # 从 /proc/net/dev 中提取接收和发送字节数
+    get_bytes() {
+        cat /proc/net/dev | grep $INTERFACE | awk '{print $2,$10}'
+    }
+
+    # 获取初始的接收和发送字节数
+    read RX_BYTES TX_BYTES <<< $(get_bytes)
+
+    # 等待一段时间（例如 1 秒）
+    sleep 1
+
+    # 获取新的接收和发送字节数
+    read RX_BYTES_NEW TX_BYTES_NEW <<< $(get_bytes)
+
+    # 计算吞吐量（单位：字节/秒）
+    RX_THROUGHPUT=$((RX_BYTES_NEW - RX_BYTES))
+    TX_THROUGHPUT=$((TX_BYTES_NEW - TX_BYTES))
+
+    # 将字节转换为 MB（1 MB = 1024 * 1024 字节）
+    RX_THROUGHPUT_MB=$((RX_THROUGHPUT / (1024 * 1024)))
+    TX_THROUGHPUT_MB=$((TX_THROUGHPUT / (1024 * 1024)))
+
+    # 输出结果
+    echo "网络接口: $INTERFACE"
+    echo "接收吞吐量: $RX_THROUGHPUT_MB MB/s"
+    echo "发送吞吐量: $TX_THROUGHPUT_MB MB/s"
+}
