@@ -50,7 +50,7 @@ fi
 
 HISTCONTROL="erasedups:ignorespace"
 
-test -s ~/.config/bash/alias.sh && . ~/.config/bash/alias.sh || true
+test -s ~/.config/bash/command.sh && . ~/.config/bash/command.sh || true
 alias grep='grep --color=auto'
 alias cz='chezmoi'
 alias vi='vim'
