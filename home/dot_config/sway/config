@@ -3,7 +3,8 @@ for_window [app_id="virt-manager"] floating enable
 
 #libinput debug-events --show-keycodes
 set $mod Mod4
-set $term alacritty
+set $term "alacritty"
+set $file "thunar"
 set $menu "rofi -modi drun,run -show drun"
 for_window [app_id="Alacritty"] move scratchpad, resize set 1130 810
 for_window [app_id=".hunar"] move scratchpad, resize set 1462 914
@@ -23,7 +24,7 @@ bindsym $mod+b exec /opt/chromium/115Browser/115.sh --ozone-platform-hint=auto -
 bindsym $mod+g exec google-chrome-stable --ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=3
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
-bindsym $mod+e exec thunar
+bindsym $mod+e exec $file
 bindsym $mod+c exec code --ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=3
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaymsg exit
