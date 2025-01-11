@@ -14,3 +14,9 @@ alias diffpkg='diff <(pacman -Qeq|sort) <(cat ~/code/base ~/code/pkg|sort)'
 alias rdp='vagrant rdp fake6 -- /cert:ignore /smart-sizing:2400x1350 /scale:180 /f'
 alias redo='vagrant destroy -f /offline[1-4]/;vagrant up /offline[1-4]/'
 alias map='ssh -o User=Share -o Port=22 -o UserKnownHostsFile=/dev/null -o ExitOnForwardFailure=yes -o ControlMaster=no -o StrictHostKeyChecking=no -o PasswordAuthentication=yes -o ForwardX11=no -n -L 0.0.0.0:3289:192.168.122.54:3389 -N 192.168.122.54'
+
+# 获取当前 CPU 核数
+CPU_CORES=$(nproc)
+
+# 查找所有 MP3 文件并并发处理
+#find . -type f -name "*.mp3" | xargs -I {} -P "$CPU_CORES" bash -c 'remove_mp3_images "$@"' _ {}

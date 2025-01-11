@@ -57,3 +57,23 @@ get_network_throughput() {
     echo "接收吞吐量: $RX_THROUGHPUT_MB MB/s"
     echo "发送吞吐量: $TX_THROUGHPUT_MB MB/s"
 }
+
+# 移除 MP3 文件中的图片
+remove_mp3_images() {
+    local input_file="$1"
+    local output_file="${input_file%.mp3}_noimg.mp3"
+
+    # 使用 ffmpeg 移除图片
+    ffmpeg -i "$input_file" -map 0:a -c:a copy -map_metadata -1 "$output_file" > /dev/null 2>&1
+
+    # 如果成功，替换原文件
+    if [ $? -eq 0 ]; then
+        mv "$output_file" "$input_file"
+        echo "已处理: $input_file"
+    else
+        echo "处理失败: $input_file"
+        rm -f "$output_file" 2>/dev/null
+    fi
+}
+
+export -f remove_mp3_images
