@@ -16,6 +16,7 @@ set $term "alacritty"
 set $file "thunar"
 set $menu "rofi -modi drun,run -show drun -x11 -dpi 192"
 bindsym Print exec maim --select | xclip -selection clipboard -t image/png
+bindsym Mod1+a exec maim --select | xclip -selection clipboard -t image/png
 
 bindsym $mod+Return exec $term
 bindsym $mod+b exec /opt/chromium/115Browser/115.sh --use-x11  --force-device-scale-factor=2
